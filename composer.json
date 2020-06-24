@@ -1,7 +1,8 @@
 {
-    "name": "gxz/cmbservice-client",
+    "name": "gxz/cmb_purchase_service",
     "type": "library",
     "keywords": [
+        "cmbpurchaseservice",
         "cmbservice",
         "cmbservice-sdk"
     ],
