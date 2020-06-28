@@ -21,10 +21,10 @@ class Client extends BaseClient
      *
      * @throws ClientError
      */
-    public function purchase(array $infos)
+    public function purchase(array $infos,string $gz)
     {
         $this->setParams($infos);
 
-        return $this->httpPostJson('/MID104/GZ0003');
+        return $this->httpPostJson('/MID104'.'/'.$gz);
     }
 }

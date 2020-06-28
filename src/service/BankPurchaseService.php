@@ -27,12 +27,12 @@ class BankPurchaseService
      * @throws ClientError
      * @throws \Exception
      */
-    public function purchase(array $infos)
+    public function purchase(array $infos,string $gz)
     {
         if (empty($infos)) {
             throw new ClientError('参数缺失', 1000001);
         }
 
-        return $this->_bankPurchaseClient->purchase($infos);
+        return $this->_bankPurchaseClient->purchase($infos,$gz);
     }
 }

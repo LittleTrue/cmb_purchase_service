@@ -21,11 +21,11 @@ class Client extends BaseClient
      *
      * @throws ClientError
      */
-    public function exchangeRateQuery(array $infos)
+    public function exchangeRateQuery(array $infos,string $gz)
     {
         $this->setParams($infos);
 
-        return $this->httpPostJson('/MID101/GZ0003');
+        return $this->httpPostJson('/MID101'.'/'.$gz);
     }
 
     /**
@@ -33,11 +33,11 @@ class Client extends BaseClient
      *
      * @throws ClientError
      */
-    public function accountQuery(array $infos)
+    public function accountQuery(array $infos,string $gz)
     {
         $this->setParams($infos);
 
-        return $this->httpPostJson('/MID102/GZ0003');
+        return $this->httpPostJson('/MID102'.'/'.$gz);
     }
 
     /**
@@ -45,10 +45,10 @@ class Client extends BaseClient
      *
      * @throws ClientError
      */
-    public function BankMessageQuery(array $infos)
+    public function BankMessageQuery(array $infos,string $gz)
     {
         $this->setParams($infos);
 
-        return $this->httpPostJson('/MID103/GZ0003');
+        return $this->httpPostJson('/MID103'.'/'.$gz);
     }
 }

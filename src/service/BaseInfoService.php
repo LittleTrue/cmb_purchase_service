@@ -26,13 +26,13 @@ class BaseInfoService
      * @throws ClientError
      * @throws \Exception
      */
-    public function exchangeRateQuery(array $infos)
+    public function exchangeRateQuery(array $infos,string $gz)
     {
         if (empty($infos)) {
             throw new ClientError('参数缺失', 1000001);
         }
 
-        return $this->_bankInfoClient->exchangeRateQuery($infos);
+        return $this->_bankInfoClient->exchangeRateQuery($infos,$gz);
     }
 
     /**
@@ -41,13 +41,13 @@ class BaseInfoService
      * @throws ClientError
      * @throws \Exception
      */
-    public function accountQuery(array $infos)
+    public function accountQuery(array $infos,string $gz)
     {
         if (empty($infos)) {
             throw new ClientError('参数缺失', 1000001);
         }
 
-        return $this->_bankInfoClient->accountQuery($infos);
+        return $this->_bankInfoClient->accountQuery($infos,$gz);
     }
 
     /**
@@ -56,12 +56,12 @@ class BaseInfoService
      * @throws ClientError
      * @throws \Exception
      */
-    public function BankMessageQuery(array $infos)
+    public function BankMessageQuery(array $infos,string $gz)
     {
         if (empty($infos)) {
             throw new ClientError('参数缺失', 1000001);
         }
 
-        return $this->_bankInfoClient->BankMessageQuery($infos);
+        return $this->_bankInfoClient->BankMessageQuery($infos,$gz);
     }
 }
