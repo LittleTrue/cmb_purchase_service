@@ -17,7 +17,7 @@ class BaseInfoService
 
     public function __construct(Application $app)
     {
-        $this->_bankInfoClient = $app['bankInfo'];
+        $this->_bankInfoClient = $app['bank_info'];
     }
 
     /**

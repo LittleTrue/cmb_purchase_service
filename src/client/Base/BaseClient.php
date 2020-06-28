@@ -102,7 +102,7 @@ class BaseClient
             return time();
         }
 
-        return number_format(microtime(true), $digits, '', '') - 500000;
+        return number_format(microtime(true), $digits, '', '') - 50000;
     }
 
     /**
